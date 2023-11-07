@@ -31,7 +31,7 @@ def departmentApi(request,id=0):
             return JsonResponse("CADASTRO ATUALIZADO COM SUCESSO", safe=False)
         return JsonResponse("Não foi possivel ATUALIZAR este funcionario", safe=False)
     
-    elif request.method == 'DELET':
+    elif request.method == 'DELETE':
         department=Departments.objects.get(DepartmentId=id)
         department.delete()
         return JsonResponse("Cadastro Deletado Com Sucesso", safe=False)

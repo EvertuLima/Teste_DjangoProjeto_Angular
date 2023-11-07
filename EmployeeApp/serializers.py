@@ -4,13 +4,13 @@ from EmployeeApp.models import Departments,Employees
 class DepartmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Departments
-        filds = ('DepartmentId', 
+        fields = ('DepartmentId', 
                  'DepartmentName')
         
 class EmployeeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Employees
-        filds = ('EmployeeId', 
+        fields = ('EmployeeId', 
                  'EmployeeName', 
                  'Department',
                  'DateOfJoin',
